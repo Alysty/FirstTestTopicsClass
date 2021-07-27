@@ -3,9 +3,9 @@ import PaymentTicket from "./PaymentTicket"
 
 export function billProcessor(bill, paymentTickets, typeOfPayment = 'BOLETO'){
     let value = 0
-    bill.payments.forEach((payment) => {
-            value = payment.value
-        }
+    value = bill.payments.reduce((acc, current) => {
+            return acc + current.value
+        }, 0
     )
     paymentTickets.forEach((payment)=>{
         bill.payments = bill.payments.concat(new Payment(payment.value, payment.date, typeOfPayment))
