@@ -1,8 +1,8 @@
 {
-  "name": "atv3",
+  "name": "test",
   "version": "1.0.0",
   "description": "",
-  "main": "Calculadora.js",
+  "main": "Bill.js",
   "scripts": {
     "test": "../node_modules/.bin/jest"
   },
