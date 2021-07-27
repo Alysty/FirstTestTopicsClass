@@ -1,4 +1,5 @@
 /TDD-exercicio.pdf
-/node_modules/
 /.idea/
 /first_part/coverage/
+/first_part/node_modules/
+/second_part/node_modules/
