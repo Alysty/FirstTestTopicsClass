@@ -11,7 +11,7 @@ export function billProcessor(bill, paymentTickets){
         bill.payments = bill.payments.concat(new Payment(payment.value, payment.date, 'BOLETO'))
         value += payment.value
     })
-    if (value === bill.value) {
+    if (value >= bill.value) {
         bill.payed = true
     }
 }

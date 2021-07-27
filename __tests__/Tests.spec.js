@@ -27,9 +27,9 @@ test('Deve retornar a fatura marcada como PAGA, e três pagamentos do tipo BOLET
         new PaymentTicket('3', Date.UTC(2000, 7, 27), 250)
     )
     const paymentArray = Array.of(
+        new Payment(1000, Date.UTC(2000, 7, 27), 'BOLETO'),
         new Payment(500, Date.UTC(2000, 7, 27), 'BOLETO'),
-        new Payment(400, Date.UTC(2000, 7, 27), 'BOLETO'),
-        new Payment(600, Date.UTC(2000, 7, 27), 'BOLETO')
+        new Payment(250, Date.UTC(2000, 7, 27), 'BOLETO')
     )
     billProcessor(bill, paymentTickets)
     expect(bill.payed).toBe(true)
