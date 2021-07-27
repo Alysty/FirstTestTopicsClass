@@ -82,12 +82,13 @@ test('Deve retornar a fatura marcada como PAGA, e tres pagamentos do tipo BOLETO
     )
     billProcessor(bill, paymentTickets)
     paymentTickets = Array.of(
-        new PaymentTicket('3', Date.UTC(2000, 7, 27), 600)
+        new PaymentTicket('2', Date.UTC(2000, 7, 27), 500)
     )
     billProcessor(bill, paymentTickets)
     paymentTickets = Array.of(
-        new PaymentTicket('2', Date.UTC(2000, 7, 27), 500)
+        new PaymentTicket('3', Date.UTC(2000, 7, 27), 600)
     )
+
     billProcessor(bill, paymentTickets)
     expect(bill.payed).toBe(true)
     expect(bill.payments).toEqual(paymentArray)
