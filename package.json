@@ -1,0 +1,17 @@
+{
+  "name": "atv3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Calculadora.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Pedro",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.7",
+    "jest": "^27.0.6"
+  }
+}
