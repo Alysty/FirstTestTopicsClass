@@ -4,7 +4,7 @@
   "description": "",
   "main": "Calculadora.js",
   "scripts": {
-    "test": "jest"
+    "test": "../node_modules/.bin/jest"
   },
   "author": "Pedro",
   "license": "ISC",
