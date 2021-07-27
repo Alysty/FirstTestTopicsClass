@@ -70,3 +70,25 @@ test('Deve retornar a fatura marcada como PAGA, e tres pagamentos do tipo BOLETO
     expect(bill.payed).toBe(true)
     expect(bill.payments).toEqual(paymentArray)
 })
+test('Deve retornar a fatura marcada como PAGA, e tres pagamentos do tipo BOLETO criados apos receber uma quantidade maior que a esperada de dinheiro em pagamentos separados em 3 partes',()=>{
+    const bill = new Bill("name", Date.now(), 1500)
+    const paymentArray = Array.of(
+        new Payment(1000, Date.UTC(2000, 7, 27), 'BOLETO'),
+        new Payment(500, Date.UTC(2000, 7, 27), 'BOLETO'),
+        new Payment(600, Date.UTC(2000, 7, 27), 'BOLETO')
+    )
+    let paymentTickets = Array.of(
+        new PaymentTicket('1', Date.UTC(2000, 7, 27), 1000)
+    )
+    billProcessor(bill, paymentTickets)
+    paymentTickets = Array.of(
+        new PaymentTicket('3', Date.UTC(2000, 7, 27), 600)
+    )
+    billProcessor(bill, paymentTickets)
+    paymentTickets = Array.of(
+        new PaymentTicket('2', Date.UTC(2000, 7, 27), 500)
+    )
+    billProcessor(bill, paymentTickets)
+    expect(bill.payed).toBe(true)
+    expect(bill.payments).toEqual(paymentArray)
+})
