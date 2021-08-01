@@ -71,3 +71,4 @@ const result1 = arr.map(mapToNumberObject)
     const pipedFunctions = R.pipe(isEven, positive, isOdd, negative, isZero, isPrime)
     const result4 = pipedFunctions({value: 0})
 // ExercÃ­cio 5: use a funÃ§Ã£o composta do Ex. 4 para transformar os nÃºmeros em 'arr'
+    const result5 = arr.map(mapToNumberObject).map(pipedFunctions)
