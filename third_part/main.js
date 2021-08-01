@@ -1,4 +1,5 @@
 const R = require('ramda');
+const {values} = require("ramda");
 
 function isEven(number) {
     const n = R.clone(number);
@@ -13,19 +14,44 @@ function positive(number) {
 }
 
 function isOdd(number) {
-    // Implementar
+    const n = R.clone(number);
+    n.odd = n.value % 2 !== 0;
+    return n;
 }
 
 function negative(number) {
-    // Implementar
+    const n = R.clone(number);
+    n.negative = n.value < 0;
+    return n;
 }
 
 function isZero(number) {
-    // Implementar
+    const n = R.clone(number);
+    n.zero = n.value === 0;
+    return n;
 }
 
 function isPrime(number) {
-    // Implementar
+    const n = R.clone(number);
+
+    n.prime = checkPrime(n.value);
+    return n;
+}
+
+function checkPrime(n) {
+    let isPrime = true;
+    if (n === 0 || n === 1) {
+        isPrime = false;
+    }
+    else {
+        for (let i = 2; i <= n / 2; ++i) {
+            if (n % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+    }
+    return isPrime;
 }
 
 function mapToNumberObject(num) {
@@ -38,7 +64,7 @@ const arr = [-1, 50, 5, 10, -8, 20, 25, 0, 100, 14, -123];
 const result1 = arr.map(mapToNumberObject)
 
 // ExercÃ­cio 2: seguindo o modelo das 2 primeiras funÃ§Ãµes implemente as outras 4 funÃ§Ãµes
-
+    //done above
 // ExercÃ­cio 3: refatore todas as funÃ§Ãµes para a forma usando arrow function (=>)
 
 // ExercÃ­cio 4: use R.pipe para compor as funÃ§Ãµes: isEven, positive, isOdd, negative,
