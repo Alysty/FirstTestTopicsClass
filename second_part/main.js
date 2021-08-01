@@ -14,10 +14,19 @@ const addedApps = elementsToArray(document.getElementsByTagName('application'))
     .map(getGitHubProject);
 
 console.log(addedApps.join('\n'));
- 
+
 // (Exercício 1) Identifique todas as declarações de funções neste projeto
     // Adicione um comentário identificando-as
-
+    /*
+        1: xmlfilter.js lines 3 to 5 contentOfTag
+        2: xmlfilter.js line 7 contentOfSource
+        3: xmlfilter.js line 8 contentOfAdded
+        4: xmlfilter.js line 9 contentOfUpdated
+        5: xmlfilter.js line 10 contentOfID
+        6: xmlfilter.js line 11 getGitHubProject
+        7: xmlfilter.js lines 13 to 18 elementsToArray
+        8: xmlfilter.js lines 20 to 35 isValid
+    */
 // (Exercício 2) Identifique quais funções no projeto possuem efeitos colaterais (side-effects)
     // Adicione um comentário identificando-as
 
