@@ -34,7 +34,15 @@ console.log(addedApps.join('\n'));
     */
 // (Exercício 3) Identifique quais funções são curried
     // Adicione um comentário identificando-as
-
+    /*
+        1: xmlfilter.js lines 3 to 5 contentOfTag
+        2: xmlfilter.js line 7 contentOfSource
+        3: xmlfilter.js line 8 contentOfAdded
+        4: xmlfilter.js line 9 contentOfUpdated
+        5: xmlfilter.js line 10 contentOfID
+        6: xmlfilter.js line 11 getGitHubProject
+        7: main.js line 10 isAddedAfter2018AndUpdatedAfter2019
+    */
 // (Exercício 4) Identifique quais funções são high-order
     // Adicione um comentário identificando-as
 
