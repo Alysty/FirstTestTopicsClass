@@ -35,6 +35,7 @@ function mapToNumberObject(num) {
 const arr = [-1, 50, 5, 10, -8, 20, 25, 0, 100, 14, -123];
 
 // ExercÃ­cio 1: use map() para transformar 'arr' em objetos usando mapToNumberObject()
+const result1 = arr.map(mapToNumberObject)
 
 // ExercÃ­cio 2: seguindo o modelo das 2 primeiras funÃ§Ãµes implemente as outras 4 funÃ§Ãµes
 
