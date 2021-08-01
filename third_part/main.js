@@ -1,5 +1,4 @@
 const R = require('ramda');
-const {values} = require("ramda");
 
 const isEven = (number) => {
     const n = R.clone(number);
@@ -40,7 +39,7 @@ const isPrime = (number) => {
 
 const checkPrime = (n) => {
     let isPrime = true;
-    if (n === 0 || n === 1) {
+    if (n < 1) {
         isPrime = false;
     }
     else {
@@ -66,8 +65,9 @@ const result1 = arr.map(mapToNumberObject)
 // ExercÃ­cio 2: seguindo o modelo das 2 primeiras funÃ§Ãµes implemente as outras 4 funÃ§Ãµes
     //done above
 // ExercÃ­cio 3: refatore todas as funÃ§Ãµes para a forma usando arrow function (=>)
-
+    //done above
 // ExercÃ­cio 4: use R.pipe para compor as funÃ§Ãµes: isEven, positive, isOdd, negative,
     // isZero, e isPrime. Teste a funÃ§Ã£o composta com um Ãºnico objeto.
-
+    const pipedFunctions = R.pipe(isEven, positive, isOdd, negative, isZero, isPrime)
+    const result4 = pipedFunctions({value: 0})
 // ExercÃ­cio 5: use a funÃ§Ã£o composta do Ex. 4 para transformar os nÃºmeros em 'arr'
